@@ -4,15 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    prinetdiskclientpi.cpp \
-    prinetdisk.cpp
+    prinetdiskclientpi.cpp
 
 HEADERS += \
-    prinetdiskclientpi.h \
-    prinetdisk.h
+    prinetdiskclientpi.h
 
 
-LIBS += -lpthread
+LIBS += -lpthread  -lboost_filesystem -lboost_system
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../build-NWmanagerClient-Desktop_Qt_5_6_1_GCC_64bit-Debug/release/ -lNWmanagerClient
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../build-NWmanagerClient-Desktop_Qt_5_6_1_GCC_64bit-Debug/debug/ -lNWmanagerClient

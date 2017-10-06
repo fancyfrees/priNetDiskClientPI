@@ -1,7 +1,9 @@
 #include "prinetdiskclientpi.h"
 
 #include "../NWmanagerClient/nwmanagerclient.h"
-#include "prinetdisk.h"
+#include "../NWmanager/prinetdisk.h"
+
+//#include "prinetdisk.h"
 
 #include <iostream>
 #include <sstream>
@@ -22,6 +24,7 @@ void priNetDiskClientPI::startServer()
 	priNetdisk  temp(this->localPort,512);
 	temp.onInit();
 	temp.doLoop();
+	this->serverSignal = false;	//服务器断开信号清空
 }
 
 void priNetDiskClientPI::startClient(const std::string &destIP, const unsigned short &destPort)

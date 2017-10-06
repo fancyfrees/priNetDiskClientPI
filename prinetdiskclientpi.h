@@ -18,9 +18,9 @@ public:
 private:
 	const std::string myName;
 	std::map<std::string, std::function<void (const std::string&)>> dealMsgFunc;
-	bool serverSignal;
+	bool serverSignal;			//服务器断开信号，本地进入监听状态
 	void onMsgDeal(const std::string & , const std::string &);
-	void transFile(std::string &);
+//	void transFile(std::string &);
 	void initClient();
 	void onSetOclientAddr(const std::string &);
 };
