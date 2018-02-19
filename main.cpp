@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	while(1)
 	{
 		test.startClient("127.0.0.1" , 8888);
+		test.waitForTer();
 		test.startClient(test.OclientIP,test.OclientPort);
 		test.startServer();
 	}
