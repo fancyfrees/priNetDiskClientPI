@@ -1,9 +1,7 @@
 #include "prinetdiskclientpi.h"
 
-#include "../NWmanagerClient/nwmanagerclient.h"
-#include "../NWmanager/prinetdisk.h"
-
-//#include "prinetdisk.h"
+#include "nwmanagerclient.h"
+#include "prinetdisk.h"
 
 #include <iostream>
 #include <sstream>

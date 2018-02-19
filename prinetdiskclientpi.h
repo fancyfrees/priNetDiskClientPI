@@ -15,6 +15,8 @@ public:
 	std::string OclientIP;
 	unsigned short OclientPort;
 	unsigned short localPort;
+
+
 private:
 	const std::string myName;
 	std::map<std::string, std::function<void (const std::string&)>> dealMsgFunc;
