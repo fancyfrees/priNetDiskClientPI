@@ -6,8 +6,8 @@
 #include <iostream>
 #include <sstream>
 
-priNetDiskClientPI::priNetDiskClientPI(const std::string &clientName)
-	:priNetDiskClient(clientName)
+priNetDiskClientPI::priNetDiskClientPI(const std::string &clientName,const int&protoType)
+	:priNetDiskClient(clientName,protoType)
 {
 	initClient();
 }
