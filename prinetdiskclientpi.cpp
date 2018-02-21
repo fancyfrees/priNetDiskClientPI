@@ -25,22 +25,6 @@ void priNetDiskClientPI::startServer()
 	this->serverSignal = false;	//服务器断开信号清空
 }
 
-//void priNetDiskClientPI::startClient(const std::string &destIP, const unsigned short &destPort)
-//{
-//	NWmanagerClient toServer;
-//	toServer.dealMsg = std::bind(&priNetDiskClientPI::onMsgDeal ,this , std::placeholders::_1,std::placeholders::_2);
-//	if( toServer.doStart(destIP,destPort) == -1)
-//	{
-//		std::cout <<" connect refuse " <<std::endl;
-//		return ;
-//	}
-//	this->localPort = toServer.getLocalPort();
-//	toServer.setMsg("setName#"+myName);
-//	toServer.doWrite();
-//	while( !serverSignal)
-//		toServer.doRead();
-//}
-
 void priNetDiskClientPI::initClient()
 {
 	dealMsgFunc.clear();
