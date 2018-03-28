@@ -7,7 +7,7 @@
 #include <sstream>
 
 priNetDiskClientPI::priNetDiskClientPI(const std::string &clientName,const int&protoType)
-	:priNetDiskClient(clientName,protoType)
+	:priNetDiskClient(clientName)
 {
 	initClient();
 }
@@ -19,7 +19,7 @@ void priNetDiskClientPI::startServer()
 	 * add a setTimer
 	 * 监听时间超时，自动重新连接服务器
 	 * */
-	priNetdisk  temp(this->localPort,512);
+	priNetdisk  temp(this->localPort,false);
 	temp.onInit();
 	temp.doLoop();
 	this->serverSignal = false;	//服务器断开信号清空

@@ -9,9 +9,9 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
-	priNetDiskClientPI  test("adminHome");
 	while(1)
 	{
+		priNetDiskClientPI  test("adminHome:123");
 //		test.startClient("123.206.196.128" , 8888);
 		test.startClient("127.0.0.1" , 8888);		//链接服务器
 		test.waitForTer();

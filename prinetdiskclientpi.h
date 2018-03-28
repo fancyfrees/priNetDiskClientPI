@@ -6,7 +6,7 @@
 #include <vector>
 #include <map>
 #include "prinetdiskclient.h"
-#include "nwmanagerclient.h"
+#include "nwmanagerudtclient.h"
 
 class priNetDiskClientPI:public priNetDiskClient
 {
