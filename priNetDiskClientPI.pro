@@ -37,3 +37,8 @@ unix:!macx: LIBS += -L$$PWD/../../CppLibrary/udt/ -ludt -lpthread
 
 INCLUDEPATH += $$PWD/../../CppLibrary/udt
 DEPENDPATH += $$PWD/../../CppLibrary/udt
+
+unix:!macx: LIBS += -L$$PWD/../../CppLibrary/build-Encrypt-Desktop_Qt_5_9_2_GCC_64bit-Debug/ -lEncrypt
+
+INCLUDEPATH += $$PWD/../../CppLibrary/Encrypt
+DEPENDPATH += $$PWD/../../CppLibrary/Encrypt

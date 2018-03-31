@@ -37,7 +37,7 @@ void priNetDiskClientPI::onSetOclientAddr(const std::string &Oclient)
 	OclientIP = Oclient.substr(0,Oclient.find(':'));
 	std::istringstream in(Oclient.substr(Oclient.find(':')+1));
 	in >> OclientPort;
-	this->serverSignal = true;
+	this->serverSignal = true;	//服务器已经断开
 }
 
 void priNetDiskClientPI::waitForTer()
