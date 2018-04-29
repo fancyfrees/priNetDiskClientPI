@@ -11,7 +11,7 @@
 class priNetDiskClientPI:public priNetDiskClient
 {
 public:
-	priNetDiskClientPI(const std::string &clientName,const int &protoType = priNetDiskClient::TCP);
+	priNetDiskClientPI(/*const std::string &clientName,*/const int &protoType = priNetDiskClient::TCP);
 	void startServer();			// listen on the localPort
 	void waitForTer();
 	void initClient();
