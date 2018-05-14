@@ -40,6 +40,16 @@ void priNetDiskClientPI::onSetOclientAddr(const std::string &Oclient)
 	this->serverSignal = true;	//服务器已经断开
 }
 
+void priNetDiskClientPI::udp_through()
+{
+	if( this->OclientIP.empty() )
+		return ;
+	this->pNWman->sendHolePacket(this->OclientIP , this->OclientPort ,
+								 this->localPort);
+	this->pNWman.reset();
+
+}
+
 void priNetDiskClientPI::waitForTer()
 {
 	if( !serverSignal )

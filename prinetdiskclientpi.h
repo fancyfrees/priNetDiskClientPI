@@ -16,5 +16,6 @@ public:
 	void waitForTer();
 	void initClient();
 	void onSetOclientAddr(const std::string &);
+	void udp_through();
 };
 #endif // PRINETDISKCLIENTPI_H
